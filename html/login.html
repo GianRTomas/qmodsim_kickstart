@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Sign In | Fatama Fighting Dragons</title>
+  <link rel="icon" type="image/png"
+    href="data:image/png;base64,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">
+  <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+  <link rel="shortcut icon" href="../images/favicon.ico">
+  <link rel="apple-touch-icon" href="../images/fatama_logo.png">
+  <meta name="description"
+    content="Sign in to Fatama Fighting Dragons portal. Single login for both students and instructors with automatic dashboard routing.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="../css/login.css">
+  <!-- Supabase JS Library & Integration -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="../js/supabase-client.js?v=20261124c"></script>
+</head>
+
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <!-- Header matching Landing Page -->
+  <header class="site-header" id="header">
+    <a class="brand" href="landing_page.html" aria-label="Fatama Fighting Dragons Home">
+      <img src="../images/fatama_logo.png" alt="Fatama Fighting Dragons Logo" class="brand-logo">
+      <span class="brand-name">Fatama <span class="brand-red">Fighting Dragons</span></span>
+    </a>
+  </header>
+
+  <!-- Main Login Section -->
+  <main class="login-main" id="main">
+    <div class="login-card-wrapper">
+      <div class="login-card">
+        <div class="login-badge">
+          <span>🥋</span>
+          <span>Dojo Portal Sign In</span>
+        </div>
+
+        <h1 class="login-title" id="loginTitle">Welcome Back</h1>
+        <p class="login-subtitle" id="loginSubtitle">Enter your email, username, or member ID. Your account credentials will automatically
+          take you to your dashboard.</p>
+
+        <!-- Dynamic Status/Alert Notices -->
+        <div class="alert-box alert-error" id="errorAlert" role="alert">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10" />
+            <line x1="12" y1="8" x2="12" y2="12" />
+            <line x1="12" y1="16" x2="12.01" y2="16" />
+          </svg>
+          <span id="errorMessage">Invalid credentials. Please verify and try again.</span>
+        </div>
+
+        <div class="alert-box alert-success" id="successAlert" role="status">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+            <polyline points="22 4 12 14.01 9 11.01" />
+          </svg>
+          <span id="successMessage">Credentials verified! Redirecting to your dashboard...</span>
+        </div>
+
+        <!-- Already Logged In Quick Routing Section -->
+        <div id="alreadyLoggedInSection" class="already-logged-card" style="display: none;">
+          <div class="user-avatar-badge-wrap">
+            <div class="already-avatar" id="alreadyAvatar"></div>
+            <span class="already-role-tag" id="alreadyRoleTag">Instructor</span>
+          </div>
+          <h2 class="already-title" id="alreadyTitle">Welcome Back!</h2>
+          <p class="already-subtitle">
+            You are already logged in as <strong id="alreadyFullName">User</strong> on this device.
+          </p>
+
+          <div class="already-actions">
+            <a href="dashboard.html" id="alreadyGoDashboardBtn" class="btn-submit already-btn-dashboard">
+              <span>Go Directly to Dashboard</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+
+            <div class="already-secondary-row">
+              <button type="button" class="btn-switch-account" onclick="handleSwitchAccount()">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="8.5" cy="7" r="4"></circle>
+                  <line x1="20" y1="8" x2="20" y2="14"></line>
+                  <line x1="23" y1="11" x2="17" y2="11"></line>
+                </svg>
+                <span>Switch Account</span>
+              </button>
+              <button type="button" class="btn-signout-link" onclick="handleLoginSignOut()">
+                Sign Out
+              </button>
+            </div>
+          </div>
+
+          <div class="redirect-countdown-wrap">
+            <div class="countdown-bar"><div class="countdown-fill" id="countdownFill"></div></div>
+            <span class="countdown-text" id="countdownText">Auto-redirecting to your dashboard...</span>
+          </div>
+        </div>
+
+        <!-- Single Unified Login Form -->
+        <form id="unifiedLoginForm" onsubmit="handleUnifiedLogin(event)">
+          <!-- Identifier Input -->
+          <div class="form-group">
+            <label class="form-label" for="loginIdentifier">Email Address</label>
+            <div class="input-icon-wrap">
+              <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                <circle cx="12" cy="7" r="4" />
+              </svg>
+              <input type="email" id="loginIdentifier" class="form-control" placeholder="e.g., yourname@example.com"
+                autocomplete="email" required>
+            </div>
+          </div>
+
+          <!-- Password Input -->
+          <div class="form-group">
+            <label class="form-label" for="loginPassword">Password</label>
+            <div class="input-icon-wrap">
+              <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+                <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+              </svg>
+              <input type="password" id="loginPassword" class="form-control" placeholder="Enter password"
+                autocomplete="current-password" required>
+              <button type="button" class="btn-toggle-pwd" id="togglePasswordBtn"
+                aria-label="Toggle password visibility" onclick="togglePasswordVisibility()">
+                <svg id="eyeIcon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2">
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                  <circle cx="12" cy="12" r="3" />
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Options Row -->
+          <div class="form-meta-row">
+            <label class="checkbox-label">
+              <input type="checkbox" id="rememberMe" checked>
+              <span>Remember me</span>
+            </label>
+            <a href="javascript:void(0)" class="forgot-link" onclick="handleForgotPassword()">Forgot password?</a>
+          </div>
+
+          <!-- Submit Button -->
+          <button type="submit" class="btn-submit" id="submitBtn">
+            <span>Log In</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </button>
+
+          <!-- Register Link -->
+          <div class="card-bottom-text">
+            Don't have an account yet? <a href="register.html">Register for Free Trial</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="login-footer">
+    © 2026 <strong>Fatama Fighting Dragons Taekwondo</strong>. All rights reserved.
+  </footer>
+
+  <!-- Mobile Bottom App-Style Navigation Bar -->
+  <nav class="mobile-bottom-bar" aria-label="Mobile Bottom Navigation">
+    <a href="landing_page.html" class="mob-tab">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+        <polyline points="9 22 9 12 15 12 15 22" />
+      </svg>
+      <span>Home</span>
+    </a>
+    <a href="register.html" class="mob-tab" id="mobBottomRegisterTab">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+        <circle cx="8.5" cy="7" r="4"></circle>
+        <line x1="20" y1="8" x2="20" y2="14"></line>
+        <line x1="23" y1="11" x2="17" y2="11"></line>
+      </svg>
+      <span>Register</span>
+    </a>
+    <a href="login.html" class="mob-tab active" id="mobBottomLoginTab">
+      <svg id="mobBottomLoginIcon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round">
+        <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4" />
+        <polyline points="10 17 15 12 10 7" />
+        <line x1="15" y1="12" x2="3" y2="12" />
+      </svg>
+      <span id="mobBottomLoginLabel">Log In</span>
+    </a>
+  </nav>
+
+  <!-- Two-Factor Authentication (Email 2FA) Modal -->
+  <div id="twoFactorModal" style="display: none; position: fixed; inset: 0; z-index: 9999; background: rgba(0,0,0,0.78); backdrop-filter: blur(6px); align-items: center; justify-content: center; padding: 16px;">
+    <div style="width: 100%; max-width: 420px; background: #1a1718; border: 1px solid rgba(255,255,255,0.14); border-radius: 16px; padding: 26px; box-shadow: 0 24px 60px rgba(0,0,0,0.65); color: #f4eee7;">
+      <div style="font-size: 0.72rem; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; color: #f5c451; margin-bottom: 6px;">Two-Factor Security</div>
+      <h3 style="margin: 0 0 8px; font-size: 1.3rem; font-weight: 800; color: #fff;">Enter Verification Code</h3>
+      <p style="margin: 0 0 16px; font-size: 0.88rem; color: #a99f98; line-height: 1.5;">
+        We sent a 6-digit 2FA code to <strong id="twoFactorEmailLabel" style="color: #fff;">your email</strong>. Enter it below to complete sign-in.
+      </p>
+      <input type="text" id="twoFactorCodeInput" maxlength="6" inputmode="numeric" autocomplete="one-time-code"
+        placeholder="000000"
+        style="width: 100%; padding: 12px 14px; text-align: center; font-size: 1.35rem; font-weight: 800; letter-spacing: 0.35em; border-radius: 10px; border: 1px solid rgba(255,255,255,0.18); background: rgba(0,0,0,0.4); color: #fff; margin-bottom: 10px;">
+      <div id="twoFactorError" style="display: none; color: #ff7b7b; font-size: 0.82rem; margin-bottom: 10px;"></div>
+      <div style="display: flex; gap: 10px; justify-content: flex-end; margin-top: 8px;">
+        <button type="button" onclick="cancelTwoFactor()"
+          style="padding: 10px 14px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.18); background: transparent; color: #d6ceca; font-weight: 600; cursor: pointer;">Cancel</button>
+        <button type="button" onclick="resendTwoFactorCode()"
+          style="padding: 10px 14px; border-radius: 8px; border: 1px solid rgba(245,196,81,0.35); background: rgba(245,196,81,0.12); color: #f5c451; font-weight: 700; cursor: pointer;">Resend</button>
+        <button type="button" id="verifyTwoFactorBtn" onclick="submitTwoFactorCode()"
+          style="padding: 10px 18px; border-radius: 8px; border: none; background: #c8141c; color: #fff; font-weight: 700; cursor: pointer;">Verify</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Password Recovery (Set New Password) Modal -->
+  <div id="resetPasswordModal" style="display: none; position: fixed; inset: 0; z-index: 9999; background: rgba(0,0,0,0.78); backdrop-filter: blur(6px); align-items: center; justify-content: center; padding: 16px;">
+    <div style="width: 100%; max-width: 440px; background: #1a1718; border: 1px solid rgba(255,255,255,0.14); border-radius: 16px; padding: 26px; box-shadow: 0 24px 60px rgba(0,0,0,0.65); color: #f4eee7;">
+      <div style="font-size: 0.72rem; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; color: #f5c451; margin-bottom: 6px;">Password Recovery</div>
+      <h3 style="margin: 0 0 8px; font-size: 1.3rem; font-weight: 800; color: #fff;">Create New Password</h3>
+      <p style="margin: 0 0 16px; font-size: 0.88rem; color: #a99f98; line-height: 1.5;">
+        Enter a new strong password for <strong id="resetPasswordEmailLabel" style="color: #fff;">your account</strong>.
+      </p>
+
+      <div style="margin-bottom: 12px;">
+        <label for="resetNewPassword" style="display: block; font-size: 0.8rem; font-weight: 700; color: #d6ceca; margin-bottom: 6px;">New Password</label>
+        <div style="position: relative;">
+          <input type="password" id="resetNewPassword" autocomplete="new-password" placeholder="Minimum 8 characters"
+            style="width: 100%; padding: 11px 40px 11px 13px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.18); background: rgba(0,0,0,0.4); color: #fff; font-size: 0.95rem; box-sizing: border-box;">
+          <button type="button" onclick="toggleResetPwdVisibility('resetNewPassword', 'resetEye1')" aria-label="Toggle new password visibility"
+            style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); background: none; border: none; color: #a99f98; cursor: pointer; padding: 4px; display: flex;">
+            <svg id="resetEye1" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+              <circle cx="12" cy="12" r="3"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <div style="margin-bottom: 10px;">
+        <label for="resetConfirmPassword" style="display: block; font-size: 0.8rem; font-weight: 700; color: #d6ceca; margin-bottom: 6px;">Confirm New Password</label>
+        <div style="position: relative;">
+          <input type="password" id="resetConfirmPassword" autocomplete="new-password" placeholder="Re-enter new password"
+            style="width: 100%; padding: 11px 40px 11px 13px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.18); background: rgba(0,0,0,0.4); color: #fff; font-size: 0.95rem; box-sizing: border-box;">
+          <button type="button" onclick="toggleResetPwdVisibility('resetConfirmPassword', 'resetEye2')" aria-label="Toggle confirm password visibility"
+            style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); background: none; border: none; color: #a99f98; cursor: pointer; padding: 4px; display: flex;">
+            <svg id="resetEye2" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+              <circle cx="12" cy="12" r="3"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <div style="font-size: 0.78rem; color: #a99f98; line-height: 1.45; margin-bottom: 12px;">
+        Must be at least 8 characters and include uppercase, lowercase, a number, and a symbol.
+      </div>
+
+      <div id="resetPasswordError" style="display: none; color: #ff7b7b; font-size: 0.82rem; margin-bottom: 12px;"></div>
+
+      <div style="display: flex; gap: 10px; justify-content: flex-end; margin-top: 8px;">
+        <button type="button" onclick="cancelPasswordReset()"
+          style="padding: 10px 14px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.18); background: transparent; color: #d6ceca; font-weight: 600; cursor: pointer;">Cancel</button>
+        <button type="button" id="saveNewPasswordBtn" onclick="submitNewPassword()"
+          style="padding: 10px 18px; border-radius: 8px; border: none; background: #c8141c; color: #fff; font-weight: 700; cursor: pointer;">Update Password</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Login Logic Scripts -->
+  <script>
+    // Toggle Password Visibility
+    function togglePasswordVisibility() {
+      const pwd = document.getElementById('loginPassword');
+      const eyeIcon = document.getElementById('eyeIcon');
+      if (pwd.type === 'password') {
+        pwd.type = 'text';
+        eyeIcon.innerHTML = `
+          <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"></path>
+          <line x1="1" y1="1" x2="23" y2="23"></line>
+        `;
+      } else {
+        pwd.type = 'password';
+        eyeIcon.innerHTML = `
+          <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+          <circle cx="12" cy="12" r="3"/>
+        `;
+      }
+    }
+
+    function hideAlerts() {
+      document.getElementById('errorAlert').classList.remove('show');
+      document.getElementById('successAlert').classList.remove('show');
+    }
+
+    function showError(msg) {
+      const err = document.getElementById('errorAlert');
+      document.getElementById('errorMessage').textContent = msg;
+      err.classList.add('show');
+      document.getElementById('successAlert').classList.remove('show');
+    }
+
+    function showSuccess(msg) {
+      const succ = document.getElementById('successAlert');
+      document.getElementById('successMessage').textContent = msg;
+      succ.classList.add('show');
+      document.getElementById('errorAlert').classList.remove('show');
+    }
+
+    let pending2FAAuth = null;
+
+    function cancelTwoFactor() {
+      pending2FAAuth = null;
+      document.getElementById('twoFactorModal').style.display = 'none';
+    }
+
+    async function resendTwoFactorCode() {
+      if (!pending2FAAuth) return;
+      const errEl = document.getElementById('twoFactorError');
+      errEl.style.display = 'none';
+      try {
+        await window.FFD_SUPABASE.sendPortalEmail('send_2fa_code', {
+          userId: pending2FAAuth.user.id,
+          email: pending2FAAuth.user.email,
+          fullName: pending2FAAuth.fullName
+        }, true);
+        showSuccess('A new 6-digit 2FA code has been sent to your email.');
+      } catch (e) {
+        errEl.textContent = e?.message || 'Failed to resend 2FA code.';
+        errEl.style.display = 'block';
+      }
+    }
+
+    async function submitTwoFactorCode() {
+      if (!pending2FAAuth) return;
+      const code = (document.getElementById('twoFactorCodeInput').value || '').trim();
+      const errEl = document.getElementById('twoFactorError');
+      const btn = document.getElementById('verifyTwoFactorBtn');
+      errEl.style.display = 'none';
+
+      if (!/^\d{6}$/.test(code)) {
+        errEl.textContent = 'Please enter the 6-digit verification code.';
+        errEl.style.display = 'block';
+        return;
+      }
+
+      btn.disabled = true;
+      btn.textContent = 'Verifying...';
+      try {
+        await window.FFD_SUPABASE.verifyLogin2FACode(pending2FAAuth.user.id, code);
+        const completed = await window.FFD_SUPABASE.completeSignInAfter2FA(pending2FAAuth);
+        document.getElementById('twoFactorModal').style.display = 'none';
+        window.onpopstate = null;
+
+        if (completed.role === 'instructor') {
+          showSuccess('2FA verified! Redirecting to Instructor Hub...');
+          setTimeout(() => window.location.replace('instructor_dashboard.html'), 400);
+        } else {
+          showSuccess('2FA verified! Redirecting to Student Portal...');
+          setTimeout(() => window.location.replace('dashboard.html'), 400);
+        }
+      } catch (e) {
+        errEl.textContent = e?.message || 'Invalid or expired 2FA code.';
+        errEl.style.display = 'block';
+        btn.disabled = false;
+        btn.textContent = 'Verify';
+      }
+    }
+
+    async function handleForgotPassword() {
+      hideAlerts();
+      const email = document.getElementById('loginIdentifier').value.trim();
+      if (!email) {
+        showError("Please enter your registered email address first to reset your password.");
+        return;
+      }
+      try {
+        const redirectTo = window.location.origin + window.location.pathname;
+        if (window.FFD_SUPABASE?.requestPasswordReset) {
+          await window.FFD_SUPABASE.requestPasswordReset(email, redirectTo);
+          showSuccess("Password reset email sent! Please check your inbox and click the reset link.");
+        } else {
+          const client = window.FFD_SUPABASE?.getClient();
+          if (client) {
+            const { error } = await client.auth.resetPasswordForEmail(email, { redirectTo });
+            if (error) throw error;
+            showSuccess("Password reset email sent! Please check your inbox.");
+          }
+        }
+      } catch (err) {
+        showError(err.message || "Failed to send reset link.");
+      }
+    }
+
+    let isPasswordRecoveryMode = false;
+
+    function toggleResetPwdVisibility(inputId, iconId) {
+      const input = document.getElementById(inputId);
+      const icon = document.getElementById(iconId);
+      if (!input || !icon) return;
+      if (input.type === 'password') {
+        input.type = 'text';
+        icon.innerHTML = `
+          <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"></path>
+          <line x1="1" y1="1" x2="23" y2="23"></line>
+        `;
+      } else {
+        input.type = 'password';
+        icon.innerHTML = `
+          <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+          <circle cx="12" cy="12" r="3"/>
+        `;
+      }
+    }
+
+    function openResetPasswordModal(userEmail) {
+      isPasswordRecoveryMode = true;
+      cancelAutoRedirect();
+      const alreadySec = document.getElementById('alreadyLoggedInSection');
+      if (alreadySec) alreadySec.style.display = 'none';
+      const titleEl = document.getElementById('loginTitle');
+      const subEl = document.getElementById('loginSubtitle');
+      const formEl = document.getElementById('unifiedLoginForm');
+      if (titleEl) titleEl.style.display = '';
+      if (subEl) subEl.style.display = '';
+      if (formEl) formEl.style.display = '';
+
+      const labelEl = document.getElementById('resetPasswordEmailLabel');
+      if (labelEl) labelEl.textContent = userEmail || 'your account';
+      const newEl = document.getElementById('resetNewPassword');
+      const confEl = document.getElementById('resetConfirmPassword');
+      const errEl = document.getElementById('resetPasswordError');
+      if (newEl) newEl.value = '';
+      if (confEl) confEl.value = '';
+      if (errEl) {
+        errEl.style.display = 'none';
+        errEl.textContent = '';
+      }
+      const modal = document.getElementById('resetPasswordModal');
+      if (modal) {
+        modal.style.display = 'flex';
+        setTimeout(() => newEl?.focus(), 50);
+      }
+    }
+
+    async function cancelPasswordReset() {
+      isPasswordRecoveryMode = false;
+      window.__FFD_RECOVERY_DETECTED__ = false;
+      try { sessionStorage.removeItem('ffd_password_recovery'); } catch (e) {}
+      const modal = document.getElementById('resetPasswordModal');
+      if (modal) modal.style.display = 'none';
+      try {
+        await window.FFD_SUPABASE?.signOutUser(false);
+      } catch (e) {}
+      if (window.history.replaceState) {
+        window.history.replaceState(null, '', 'login.html');
+      }
+    }
+
+    async function submitNewPassword() {
+      const newPwd = document.getElementById('resetNewPassword').value;
+      const confirmPwd = document.getElementById('resetConfirmPassword').value;
+      const errEl = document.getElementById('resetPasswordError');
+      const btn = document.getElementById('saveNewPasswordBtn');
+
+      errEl.style.display = 'none';
+
+      const isStrongPwd = newPwd.length >= 8 &&
+        /[A-Z]/.test(newPwd) &&
+        /[a-z]/.test(newPwd) &&
+        /[0-9]/.test(newPwd) &&
+        /[^A-Za-z0-9]/.test(newPwd);
+
+      if (!isStrongPwd) {
+        errEl.textContent = 'Password must be at least 8 characters and include uppercase, lowercase, a number, and a symbol.';
+        errEl.style.display = 'block';
+        return;
+      }
+
+      if (newPwd !== confirmPwd) {
+        errEl.textContent = 'Passwords do not match. Please re-enter them carefully.';
+        errEl.style.display = 'block';
+        return;
+      }
+
+      btn.disabled = true;
+      btn.textContent = 'Updating...';
+      try {
+        const res = await window.FFD_SUPABASE.completePasswordReset(newPwd);
+        isPasswordRecoveryMode = false;
+        window.__FFD_RECOVERY_DETECTED__ = false;
+        try { sessionStorage.removeItem('ffd_password_recovery'); } catch (e) {}
+        document.getElementById('resetPasswordModal').style.display = 'none';
+        if (window.history.replaceState) {
+          window.history.replaceState(null, '', 'login.html');
+        }
+        if (res?.email) {
+          const idInput = document.getElementById('loginIdentifier');
+          if (idInput) idInput.value = res.email;
+        }
+        document.getElementById('loginPassword').value = '';
+        showSuccess('Password updated successfully! Please sign in with your new password.');
+      } catch (err) {
+        errEl.textContent = err?.message || 'Failed to update password. Please request a new reset link.';
+        errEl.style.display = 'block';
+      } finally {
+        btn.disabled = false;
+        btn.textContent = 'Update Password';
+      }
+    }
+
+    let redirectTimer = null;
+
+    function cancelAutoRedirect() {
+      if (redirectTimer) {
+        clearTimeout(redirectTimer);
+        redirectTimer = null;
+      }
+    }
+
+    async function handleLoginSignOut() {
+      cancelAutoRedirect();
+      await window.FFD_SUPABASE?.signOutUser(false);
+      document.getElementById('alreadyLoggedInSection').style.display = 'none';
+      document.getElementById('loginTitle').style.display = '';
+      document.getElementById('loginSubtitle').style.display = '';
+      document.getElementById('unifiedLoginForm').style.display = '';
+      const mobBottomLoginTab = document.getElementById('mobBottomLoginTab');
+      const mobBottomLoginLabel = document.getElementById('mobBottomLoginLabel');
+      const mobBottomLoginIcon = document.getElementById('mobBottomLoginIcon');
+      if (mobBottomLoginTab && mobBottomLoginLabel) {
+        mobBottomLoginTab.href = 'login.html';
+        mobBottomLoginLabel.textContent = 'Log In';
+        mobBottomLoginTab.classList.remove('mob-tab--gold');
+        if (mobBottomLoginIcon) {
+          mobBottomLoginIcon.innerHTML = `
+            <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4" />
+            <polyline points="10 17 15 12 10 7" />
+            <line x1="15" y1="12" x2="3" y2="12" />
+          `;
+        }
+      }
+      showSuccess("Signed out successfully. You can now sign in to another account.");
+    }
+
+    function handleSwitchAccount() {
+      cancelAutoRedirect();
+      document.getElementById('alreadyLoggedInSection').style.display = 'none';
+      document.getElementById('loginTitle').style.display = '';
+      document.getElementById('loginSubtitle').style.display = '';
+      document.getElementById('unifiedLoginForm').style.display = '';
+      document.getElementById('loginIdentifier').value = '';
+      document.getElementById('loginPassword').value = '';
+      document.getElementById('loginIdentifier').focus();
+    }
+
+    // Unified Supabase Login Handler
+    async function handleUnifiedLogin(e) {
+      e.preventDefault();
+      hideAlerts();
+      cancelAutoRedirect();
+
+      const email = document.getElementById('loginIdentifier').value.trim();
+      const password = document.getElementById('loginPassword').value.trim();
+      const remember = document.getElementById('rememberMe')?.checked ?? true;
+
+      if (!email || !password) {
+        showError("Please enter your email and password.");
+        return;
+      }
+
+      const submitBtn = document.getElementById('submitBtn');
+      const originalBtnHtml = submitBtn.innerHTML;
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = `<span>Authenticating with Supabase...</span>`;
+
+      try {
+        const result = await window.FFD_SUPABASE.signInUser(email, password, remember);
+
+        if (result && result.requires2FA) {
+          pending2FAAuth = result;
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = originalBtnHtml;
+          document.getElementById('twoFactorEmailLabel').textContent = result.user?.email || email;
+          document.getElementById('twoFactorCodeInput').value = '';
+          document.getElementById('twoFactorError').style.display = 'none';
+          document.getElementById('twoFactorModal').style.display = 'flex';
+          document.getElementById('twoFactorCodeInput').focus();
+          return;
+        }
+
+        // Clear any window popstate traps before navigating
+        window.onpopstate = null;
+
+        if (result.role === 'instructor') {
+          showSuccess(`Authenticated as Instructor (${result.fullName}). Redirecting to Instructor Hub...`);
+          setTimeout(() => {
+            window.location.replace('instructor_dashboard.html');
+          }, 500);
+        } else {
+          showSuccess(`Authenticated as Student (${result.fullName}). Redirecting to Student Portal...`);
+          setTimeout(() => {
+            window.location.replace('dashboard.html');
+          }, 500);
+        }
+      } catch (err) {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = originalBtnHtml;
+
+        let friendlyMsg = err.message || "Invalid credentials. Please verify and try again.";
+        if (friendlyMsg.toLowerCase().includes('invalid login credentials')) {
+          friendlyMsg = "Incorrect email or password. Please verify your credentials.";
+        } else if (friendlyMsg.toLowerCase().includes('email not confirmed')) {
+          friendlyMsg = "Your email has not been confirmed yet. Please check your inbox for the confirmation link from Supabase.";
+        }
+        showError(friendlyMsg);
+      }
+    }
+
+    // Listen for PASSWORD_RECOVERY event captured by supabase-client.js
+    window.addEventListener('ffd:password-recovery', (ev) => {
+      openResetPasswordModal(ev?.detail?.session?.user?.email);
+    });
+
+    // Auto-detect if user is already logged in on this device
+    window.addEventListener('DOMContentLoaded', async () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const rawHash = window.location.hash || '';
+      const hashParams = new URLSearchParams(rawHash.startsWith('#') ? rawHash.slice(1) : rawHash);
+      const authErrorDesc = urlParams.get('error_description') || hashParams.get('error_description');
+      const recoveryTokenHash = urlParams.get('token_hash');
+      const isRecoveryUrl = Boolean(
+        window.__FFD_RECOVERY_DETECTED__ ||
+        sessionStorage.getItem('ffd_password_recovery') === '1' ||
+        hashParams.get('type') === 'recovery' ||
+        urlParams.get('type') === 'recovery' ||
+        rawHash.includes('type=recovery')
+      );
+
+      const sbClient = window.FFD_SUPABASE?.getClient();
+
+      if (authErrorDesc && (isRecoveryUrl || /expired|invalid|otp|token/i.test(authErrorDesc))) {
+        window.__FFD_RECOVERY_DETECTED__ = false;
+        try { sessionStorage.removeItem('ffd_password_recovery'); } catch (e) {}
+        showError("This password reset link is invalid or has expired. Please enter your email and click Forgot Password to request a new one.");
+        if (window.history.replaceState) {
+          window.history.replaceState(null, '', 'login.html');
+        }
+        return;
+      }
+
+      if (isRecoveryUrl) {
+        isPasswordRecoveryMode = true;
+        cancelAutoRedirect();
+        sessionStorage.removeItem('ffd_logged_out');
+        localStorage.removeItem('ffd_logged_out');
+        try {
+          if (sbClient && recoveryTokenHash) {
+            const { data: verifyData, error: verifyErr } = await sbClient.auth.verifyOtp({
+              token_hash: recoveryTokenHash,
+              type: 'recovery'
+            });
+            if (verifyErr) throw verifyErr;
+            openResetPasswordModal(verifyData?.user?.email);
+            return;
+          }
+          if (sbClient) {
+            const { data: sessionData } = await sbClient.auth.getSession();
+            if (sessionData?.session?.user) {
+              openResetPasswordModal(sessionData.session.user.email);
+              return;
+            }
+          }
+          openResetPasswordModal();
+        } catch (recErr) {
+          isPasswordRecoveryMode = false;
+          window.__FFD_RECOVERY_DETECTED__ = false;
+          try { sessionStorage.removeItem('ffd_password_recovery'); } catch (e) {}
+          showError(recErr?.message || "This password reset link is invalid or has expired. Please request a new one.");
+          if (window.history.replaceState) {
+            window.history.replaceState(null, '', 'login.html');
+          }
+        }
+        return;
+      }
+
+      const isLoggedOut = urlParams.get('logout') === 'true';
+      const isAuthRequired = urlParams.get('auth') === 'required';
+      const isExplicitlyLoggedOut = isLoggedOut || localStorage.getItem('ffd_logged_out') === 'true' || sessionStorage.getItem('ffd_logged_out') === 'true';
+
+      if (isExplicitlyLoggedOut) {
+        sessionStorage.removeItem('ffd_logged_out');
+        localStorage.removeItem('ffd_logged_out');
+        await window.FFD_SUPABASE?.signOutUser(false);
+        showSuccess("You have been signed out successfully.");
+        document.getElementById('alreadyLoggedInSection').style.display = 'none';
+        document.getElementById('loginTitle').style.display = '';
+        document.getElementById('loginSubtitle').style.display = '';
+        document.getElementById('unifiedLoginForm').style.display = '';
+        if (window.history.replaceState) {
+          window.history.replaceState(null, '', 'login.html');
+        }
+        return;
+      }
+
+      if (isAuthRequired) {
+        sessionStorage.removeItem('ffd_logged_out');
+        localStorage.removeItem('ffd_logged_out');
+        showError("Your session has expired or you have logged out. Please sign in to continue.");
+        if (window.history.replaceState) {
+          window.history.replaceState(null, '', 'login.html');
+        }
+        return;
+      }
+
+      if (urlParams.get('switch') === 'true') {
+        return; // stay on clean login form
+      }
+
+      // Check for incoming email confirmation from signup link
+      const isEmailConfirmed = urlParams.get('confirmed') === 'true' ||
+                               window.location.hash.includes('type=signup') ||
+                               urlParams.get('type') === 'signup';
+
+      if (isEmailConfirmed) {
+        showSuccess("🎉 Email confirmed successfully! Your student account is now active. Please sign in below.");
+        try {
+          const raw = sessionStorage.getItem('ffd_pending_registration') || localStorage.getItem('ffd_pending_registration');
+          if (raw) {
+            const data = JSON.parse(raw);
+            if (data.email) {
+              const idInput = document.getElementById('loginIdentifier');
+              if (idInput && !idInput.value) idInput.value = data.email;
+            }
+            if (window.FFD_SUPABASE?.finalizeAccountCreation) {
+              window.FFD_SUPABASE.finalizeAccountCreation(null, data);
+            }
+          }
+        } catch (e) {}
+        if (window.history.replaceState) {
+          window.history.replaceState(null, '', 'login.html');
+        }
+      }
+
+      // Check for active device session
+      try {
+        let session = window.FFD_SUPABASE?.getStoredUserSession();
+        if (!session && window.FFD_SUPABASE?.getActiveSessionAsync) {
+          session = await window.FFD_SUPABASE.getActiveSessionAsync();
+        }
+
+        if (!isPasswordRecoveryMode && session && session.role) {
+          const isInstructor = session.role === 'instructor';
+          const targetUrl = isInstructor ? 'instructor_dashboard.html' : 'dashboard.html';
+          const first = (session.fullName || 'User').trim().split(' ')[0] || 'User';
+          const parts = (session.fullName || '').trim().split(' ');
+          const initials = ((first[0] || 'U') + (parts.length > 1 ? parts[parts.length - 1][0] : '')).toUpperCase();
+
+          // Populate already logged in section
+          const alreadySec = document.getElementById('alreadyLoggedInSection');
+          const alreadyAvatar = document.getElementById('alreadyAvatar');
+          const alreadyRoleTag = document.getElementById('alreadyRoleTag');
+          const alreadyTitle = document.getElementById('alreadyTitle');
+          const alreadyFullName = document.getElementById('alreadyFullName');
+          const alreadyGoBtn = document.getElementById('alreadyGoDashboardBtn');
+          const countdownFill = document.getElementById('countdownFill');
+
+          alreadyAvatar.textContent = initials;
+          if (isInstructor) {
+            alreadyAvatar.classList.add('avatar-gold');
+            alreadyRoleTag.classList.add('tag-gold');
+            alreadyRoleTag.textContent = session.rank || 'Instructor';
+            alreadyGoBtn.classList.add('btn-gold');
+            if (countdownFill) countdownFill.classList.add('fill-gold');
+          } else {
+            alreadyAvatar.classList.remove('avatar-gold');
+            alreadyRoleTag.classList.remove('tag-gold');
+            alreadyRoleTag.textContent = session.rank || 'Student';
+            alreadyGoBtn.classList.remove('btn-gold');
+            if (countdownFill) countdownFill.classList.remove('fill-gold');
+          }
+
+          alreadyTitle.textContent = `Welcome Back, ${first}!`;
+          alreadyFullName.textContent = session.fullName || session.email;
+          alreadyGoBtn.href = targetUrl;
+
+          const mobBottomLoginTab = document.getElementById('mobBottomLoginTab');
+          const mobBottomLoginLabel = document.getElementById('mobBottomLoginLabel');
+          const mobBottomLoginIcon = document.getElementById('mobBottomLoginIcon');
+          if (mobBottomLoginTab && mobBottomLoginLabel) {
+            mobBottomLoginTab.href = targetUrl;
+            mobBottomLoginLabel.textContent = 'Dashboard';
+            if (isInstructor) mobBottomLoginTab.classList.add('mob-tab--gold');
+            if (mobBottomLoginIcon) {
+              mobBottomLoginIcon.innerHTML = `
+                <rect x="3" y="3" width="7" height="7"></rect>
+                <rect x="14" y="3" width="7" height="7"></rect>
+                <rect x="14" y="14" width="7" height="7"></rect>
+                <rect x="3" y="14" width="7" height="7"></rect>
+              `;
+            }
+          }
+
+          // Switch views
+          document.getElementById('loginTitle').style.display = 'none';
+          document.getElementById('loginSubtitle').style.display = 'none';
+          document.getElementById('unifiedLoginForm').style.display = 'none';
+          alreadySec.style.display = 'block';
+
+          // Animate countdown bar
+          requestAnimationFrame(() => {
+            setTimeout(() => {
+              if (countdownFill) countdownFill.style.width = '100%';
+            }, 50);
+          });
+
+          // Automatically redirect
+          redirectTimer = setTimeout(() => {
+            window.location.href = targetUrl;
+          }, 950);
+        }
+      } catch (err) {
+        console.warn('Session check on login load:', err);
+      }
+    });
+
+    window.addEventListener('pageshow', function(event) {
+      const hasSession = sessionStorage.getItem('ffd_active_role') || localStorage.getItem('ffd_active_role');
+      if (!hasSession) {
+        cancelAutoRedirect();
+        const alreadySec = document.getElementById('alreadyLoggedInSection');
+        if (alreadySec) alreadySec.style.display = 'none';
+        if (document.getElementById('loginTitle')) document.getElementById('loginTitle').style.display = '';
+        if (document.getElementById('loginSubtitle')) document.getElementById('loginSubtitle').style.display = '';
+        if (document.getElementById('unifiedLoginForm')) document.getElementById('unifiedLoginForm').style.display = '';
+      }
+    });
+
+    /* ===== Header onScroll fade effect ===== */
+    const header = document.getElementById('header');
+    const onScroll = () => header.classList.toggle('solid', window.scrollY > 40);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  </script>
+</body>
+
+</html>

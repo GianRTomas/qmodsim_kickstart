@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>FATAMA-QMODSIM Engine Verification Runner</title>
+  <style>
+    body { font-family: system-ui, sans-serif; background: #020617; color: #f8fafc; padding: 2rem; max-width: 900px; margin: 0 auto; }
+    .row { padding: 0.85rem 1rem; margin: 0.6rem 0; border-radius: 0.6rem; background: #0f172a; border: 1px solid #1e293b; }
+    .pass { border-left: 4px solid #34d399; }
+    .fail { border-left: 4px solid #f43f5e; }
+    code { font-family: ui-monospace, monospace; color: #22d3ee; }
+  </style>
+</head>
+<body>
+  <h1>FATAMA-QMODSIM Automated Invariant Verification</h1>
+  <div id="output">Running mathematical invariant checks...</div>
+  <script type="module">
+    import { runInvariantChecks } from '../src/engines/validation.js';
+    const results = runInvariantChecks();
+    const out = document.getElementById('output');
+    const allOk = results.every((r) => r.passed);
+    out.innerHTML = `<p><strong>Summary:</strong> ${results.filter((r) => r.passed).length}/${results.length} invariants passed (${allOk ? 'ALL PASS' : 'FAILURE'})</p>` +
+      results.map((r) => `
+        <div class="row ${r.passed ? 'pass' : 'fail'}">
+          <strong>[${r.module}] ${r.target} — ${r.passed ? 'PASS' : 'FAIL'}</strong><br/>
+          <small>Standard: <code>${r.standard}</code></small><br/>
+          <small>Measured: <code>${r.measured}</code></small>
+        </div>
+      `).join('');
+  </script>
+</body>
+</html>
+

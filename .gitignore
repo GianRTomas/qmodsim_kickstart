@@ -1,0 +1,16 @@
+# System & OS
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# IDE / Editor
+.vscode/
+.idea/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Nested clone folder
+qmodsim_kickstart/
