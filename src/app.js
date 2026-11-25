@@ -277,7 +277,6 @@ function renderCurriculumOverview() {
           <span class="badge-mono badge-cyan">Curriculum Architecture</span>
           <h2>8 Quantitative Modeling &amp; Cyber-Defense Modules</h2>
         </div>
-        <a href="html/landing_page.html" class="portal-link">Open FATAMA KickStart Portal →</a>
       </div>
       <div class="overview-grid">
         ${CURRICULUM_CARDS.map(

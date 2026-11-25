@@ -15,7 +15,6 @@ python server.py
 Then navigate in your browser to:
 - **Interactive QMODSIM Web Artifact:** `http://127.0.0.1:5500/qmodsim.html` *(or whichever port `server.py` prints)*
 - **Mathematical Invariant Test Runner:** `http://127.0.0.1:5500/tests/verify.html`
-- **FATAMA KickStart Portal:** `http://127.0.0.1:5500/html/landing_page.html`
 
 ---
 
