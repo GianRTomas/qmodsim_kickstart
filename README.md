@@ -37,4 +37,5 @@ Then navigate in your browser to:
 - [`SPEC.md`](SPEC.md) — Mathematical contracts, domain assumptions, and interface specification
 - [`DESIGN_SYSTEM.md`](DESIGN_SYSTEM.md) — Dark/Light tokens, typography, and theme-reactive canvas spec
 - [`AI_USAGE.md`](AI_USAGE.md) — Agentic workflow log, OWASP skill vetting, refinement iterations, and code attribution
+- [`MATH_VERIFICATION.md`](MATH_VERIFICATION.md) — Automated mathematical invariant checks, tolerances, and verification runner guide
 
